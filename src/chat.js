@@ -11,8 +11,10 @@ function createStyles() {
   .chat-modal-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.45); }
   .chat-modal-panel { position:relative; width:min(96vw,1000px); height:min(90vh,900px); background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.3); }
   .chat-panel-header { display:flex; justify-content:space-between; align-items:center; padding:8px 12px; background:#f7f7f7; border-bottom:1px solid #eee; }
-  .chat-panel-body { padding:0; height:calc(100% - 44px); }
-  .chat-panel-body iframe { border:0; width:100%; height:100%; }
+  /* Add bottom padding inside the panel so the chat input area in the iframe has visual breathing room */
+  .chat-panel-body { padding:0 0 28px 0; box-sizing:border-box; height:calc(100% - 44px); }
+  /* Ensure iframe leaves space for the padding; use !important to override inline heights */
+  .chat-panel-body iframe { border:0; width:100%; height:calc(100% - 28px) !important; }
   .chat-close-btn { background:transparent; border:0; font-size:18px; cursor:pointer; }
   `;
   const style = document.createElement('style');
