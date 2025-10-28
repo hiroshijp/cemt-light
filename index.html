@@ -9,5 +9,44 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    
+    <script>
+     window.difyChatbotConfig = {
+      token: 'iVMkwl5mpQPQynim',
+      inputs: {
+        // You can define the inputs from the Start node here
+      },
+      systemVariables: {
+        // user_id: 'YOU CAN DEFINE USER ID HERE',
+        // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+      },
+      userVariables: {
+        // avatar_url: 'YOU CAN DEFINE USER AVATAR URL HERE',
+        // name: 'YOU CAN DEFINE USER NAME HERE',
+      },
+     }
+    </script>
+    <script
+     src="https://udify.app/embed.min.js"
+     id="iVMkwl5mpQPQynim"
+     defer>
+    </script>
+    <style>
+      #dify-chatbot-bubble-button {
+        background-color: #A020F0 !important;
+      }
+      /* enlarged chat window */
+      #dify-chatbot-bubble-window {
+        width: 32rem !important; /* wider */
+        height: 56rem !important; /* taller */
+        max-width: calc(100vw - 32px) !important; /* avoid overflow on small screens */
+        max-height: calc(100vh - 48px) !important;
+      }
+      /* If the embed provides a root inside the window, make it use full size */
+      #dify-chatbot-bubble-window > * {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    </style>
   </body>
 </html>
