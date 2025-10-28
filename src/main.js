@@ -4,9 +4,10 @@ import { createPreview } from './preview.js'
 
 // アプリのルートをシンプルな2カラムに置き換える
 document.querySelector('#app').innerHTML = `
-  <div id="cemt-root">
+    <div id="cemt-root">
     <header class="app-header">
-      <h1 class="title">CeMT(軽量版)</h1>
+      <h1 class="title">Coding Enviroment for Mass Teaching(軽量版)</h1>
+      <button id="chat-open-btn" class="chat-btn">AIに聞く</button>
     </header>
     <div class="split-root">
       <div class="pane">

@@ -151,6 +151,9 @@ h1 {
   font-size: 1.25rem; /* larger page title */
   font-weight: 700;
 }
+/* place chat button next to the title inside .app-header and push it to the right */
+.app-header { display:flex; align-items:center; gap:12px; justify-content:space-between; }
+.app-header .chat-btn { padding:8px 12px; background:#1E90FF; color:#fff; border:none; border-radius:6px; cursor:pointer; margin-left:auto; }
 
 /* pane header */
 .pane-header {
